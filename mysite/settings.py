@@ -27,7 +27,7 @@ SECRET_KEY = '950ogjhyos5u!095)4)22ulo(&de#&9qejxz)1*2%rck-+wi!i'
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
 
-DEBUG = False
+DEBUG = True
 
 try:
     from .local_settings import *
@@ -142,7 +142,8 @@ STATICFILES_DIRS = (
 # Update database configuration with $DATABASE_URL.
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
-DATABASES['default'] = dj_database_url.config()
+#DATABASES['default'] = dj_database_url.config()
+
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
